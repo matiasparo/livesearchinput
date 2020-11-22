@@ -95,8 +95,13 @@ export default () => {
     input.value = name;
     showLoading();
     getAPIByID(id).subscribe(data=>{
+      //TODO: implement results view
       //hide loading after api result
       //hideLoading();
+      // simulate delay with server
+      setTimeout(()=>{
+        hideLoading();
+      },1000);
     });
     hideBoxSearch();
   });
