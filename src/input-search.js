@@ -1,4 +1,4 @@
-import { viewResult, showLoading, hideLoading } from "./views";
+import { viewResult, showLoading, hideLoading, hideBoxSearch, showBoxSearch } from "./views";
 import { EMPTY, fromEvent, of, pipe } from "rxjs";
 import { ajax } from "rxjs/ajax";
 import {
@@ -51,15 +51,7 @@ function getAPIByID(id) {
   return fetchAPIById(id);
 }
 
-function showBoxSearch() {
-  const contentResult = document.getElementById("result-content-item");
-  contentResult.style.display = "block";
-}
 
-function hideBoxSearch() {
-  const contentResult = document.getElementById("result-content-item");
-  contentResult.style.display = "none";
-}
 
 const pipeLogicSearch = () => {
   return pipe(
@@ -97,7 +89,6 @@ const pipeLogicSelect = () =>{
 }
 
 const selectItemResult = (item) => {
-  console.log(item);
   const input = document.getElementById("input-search-view");
   input.value = item.name;
   showLoading();
