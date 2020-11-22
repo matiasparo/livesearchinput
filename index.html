@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
     <title>Frontend Challenge</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <style>
       body {
-        padding-left: 20px;
         font-family: Montserrat;
+      }
+      .full-container{
+        width: 100%;
       }
       .container {
         display: flex;
-        flex-direction: column;
-        width: auto;
+        max-width: 460px;
+        flex-wrap: wrap;
         margin: 0 auto;
       }
 
       .container-label {
         margin: 0 auto;
-        width: 460px;
+        width: 100%;
         margin-bottom: 8px;
       }
       .span-label {
@@ -29,7 +34,7 @@
       .input-search-view {
         background-color: #ffffff;
         padding: 16px;
-        width: 460px;
+        width: 100%;
         height: 48px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -49,7 +54,7 @@
       }
 
       .input-container {
-        margin: 0 auto;
+        width: 100%;
       }
 
       .input-search-view:hover {
@@ -81,7 +86,7 @@
       }
 
       .result-container {
-        width: 460px;
+        width: 100%;
         margin: 0px auto;        
       }
       .result-content-item{
@@ -91,8 +96,16 @@
         -webkit-border-radius: 0px 0px 4px 4px;
         -moz-border-radius: 0px 0px 4px 4px;
         border-radius: 0px 0px 4px 4px;
-        border-top: 0px;
+        border-top: none;
+        border-bottom: none;
         display: block;
+      }
+      .result-content-item.show{
+        border-bottom: 1px solid #d2d2d2;  
+        display: block;
+      }
+      .result-content-item.hide{
+        display: none;
       }
       .result-item{
           padding:11px 16px 9px;
@@ -108,32 +121,26 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="container-label">
-        <span class="span-label">Encuentra profesionales de confianza</span>
-      </div>
-      <div class="input-container">
-        <input
-          id="input-search-view"
-          value=""
-          type="text"
-          class="input-search-view icon icon-search-o"
-          placeholder="Qué necesitas..."
-        />
-      </div>
-      <div
-        class="result-container"       
-      >
-        <div id="result-content-item" class="result-content-item">
-          <!-- <div class="result-item">
-            <strong >D</strong>elaware
+    <div class="full-content">
+      <div class="container">      
+        <div class="container-label">
+          <span class="span-label">Encuentra profesionales de confianza</span>
+        </div>
+        <div class="input-container">
+          <input
+            id="input-search-view"
+            value=""
+            type="text"
+            class="input-search-view icon icon-search-o"
+            placeholder="Qué necesitas..."
+          />
+        </div>
+        <div
+          class="result-container"       
+        >
+          <div id="result-content-item" class="result-content-item">
+            
           </div>
-          <div class="result-item">
-            North <strong class="tt-highlight">D</strong>akota
-          </div>
-          <div class="result-item">
-            South <strong class="tt-highlight">D</strong>akota
-          </div> -->
         </div>
       </div>
     </div>
