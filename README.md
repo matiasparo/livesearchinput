@@ -7,3 +7,5 @@ Una vez clonado el repo se debera ejecutar:
 
 
 [El buscador esta implementado con The Rick and Morty API](https://rickandmortyapi.com/)
+
+[PUBLICADO](https://frontend-challenge-livesearch.netlify.app/) 
