@@ -1,5 +1,5 @@
 //import stuff
-import example from './input-search';
+import livesearch from './input-search';
 
 //run stuff
-example();
+livesearch();

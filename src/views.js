@@ -1,11 +1,12 @@
 /* Utility to show content into the view */
+import {ID_INPUT_SEARCH_VIEW_ELEMENT, ID_RESULT_CONTENT_ITEM_ELEMENT} from './config';
 
 export const showLoading = () => {
-  const contentResult = document.getElementById("input-search-view");
+  const contentResult = document.getElementById(ID_INPUT_SEARCH_VIEW_ELEMENT);
   contentResult.classList.add("loading");
 };
 export const hideLoading = () => {
-  const contentResult = document.getElementById("input-search-view");
+  const contentResult = document.getElementById(ID_INPUT_SEARCH_VIEW_ELEMENT);
   contentResult.classList.remove("loading");
 };
 
@@ -57,13 +58,13 @@ export const viewResult = (arrResult, searchTerm) => {
 };
 
 export const showBoxSearch = () => {
-  const contentResult = document.getElementById("result-content-item");
+  const contentResult = document.getElementById(ID_RESULT_CONTENT_ITEM_ELEMENT);
   contentResult.classList.remove("hide");
   contentResult.classList.add("show");
 };
 
 export const hideBoxSearch = () => {
-  const contentResult = document.getElementById("result-content-item");
+  const contentResult = document.getElementById(ID_RESULT_CONTENT_ITEM_ELEMENT);
   contentResult.classList.remove("show");
   contentResult.classList.add("hide");
 };

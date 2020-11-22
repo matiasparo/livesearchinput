@@ -1,0 +1,10 @@
+export const URL = "https://rickandmortyapi.com/api/character/";
+export const MIN_LENGTH = 0;
+export const MAX_RESULT = 4;
+export const KEY_CODE_UP = 38;
+export const KEY_CODE_DOWN = 40;
+export const KEY_CODE_SELECT = 13;
+export const MOVEKEYCODE=[KEY_CODE_UP,KEY_CODE_DOWN];
+export const SELECTCODE=[KEY_CODE_SELECT];
+export const ID_INPUT_SEARCH_VIEW_ELEMENT = 'input-search-view';
+export const ID_RESULT_CONTENT_ITEM_ELEMENT = 'result-content-item';
